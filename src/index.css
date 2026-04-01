@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@import "./theme.css";
+
+/**/
+#root  {
+  @apply font-poppins min-h-screen flex flex-col;
+};
+
+main{
+  @apply h-full grow;
+};
+/*Style header*/
+header {
+    a {
+        @apply text-main-800 
+        underline decoration-transparent 
+        hover:decoration-main-900 hover:decoration-2 underline-offset-6 
+        transition duration-150 ease-in-out;
+    }
+    a.active{
+      @apply text-secondary-400;
+    }
+   
+};
+.btn{
+  @apply bg-main-800 text-main-50 py-2 px-4 rounded-lg no-underline outline-2 
+  outline-transparent hover:outline-main-800 hover:bg-transparent hover:text-main-800;
+}
+

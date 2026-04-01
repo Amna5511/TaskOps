@@ -1,0 +1,42 @@
+[
+    {
+       "question": " What is Task Operator?",
+       "answer" : "Task Operator is a productivity web app that combines a powerful Pomodoro timer with an intuitive task management system, helping you stay focused, organized, and in control of your workday."
+    },
+    {
+       "question": "How does the Pomodoro timer work? ",
+       "answer" : "The Pomodoro timer in Task Operator uses the proven 25-minute focus + 5-minute break method. You can customize session lengths to match your workflow and track your completed focus sessions."
+    },
+    {
+       "question": "Can I manage my tasks in Task Operator?",
+       "answer" : "Yes! You can create, edit, prioritize, and mark tasks as complete. Tasks can be grouped into categories or projects, making it easy to organize your work."
+    },
+    {
+       "question": "Do I need an account to use Task Operator?",
+       "answer" : "You can use the basic Pomodoro timer without an account, but creating a free account unlocks task saving, progress tracking, and syncing across devices."
+    },
+    {
+       "question": "Is Task Operator suitable for teams?",
+       "answer" : "Currently, Task Operator is designed for individual productivity, but team collaboration features are planned for future updates."
+    },
+    {
+       "question": "Can I customize the timer settings?",
+       "answer" : "Absolutely. You can adjust focus and break durations, set long breaks after a certain number of sessions, and even enable sound or visual notifications."
+    },
+    {
+       "question": "Does Task Operator work on mobile devices? ",
+       "answer" : "Yes. Task Operator is fully responsive and works seamlessly on desktops, tablets, and smartphones through your web browser."
+    },
+    {
+       "question": " Is my data safe?",
+       "answer" : "We take privacy seriously. All your data is stored securely, and we never share your information with third parties without your consent"
+    },
+    {
+       "question": "Is Task Operator free to use?",
+       "answer" : "The core features are free. A premium version with advanced analytics, themes, and cloud backup is available for users who want more customization and insights."
+    },
+    {
+       "question": "Why should I choose Task Operator over other productivity tools?",
+       "answer" : "Task Operator combines focus and task management in one clean, distraction-free interface. You don’t need multiple apps — everything you need to plan, focus, and complete your work is in one place."
+    }
+]
