@@ -17,7 +17,7 @@ export const FaqHome =()=>{
 
             <div key={index} className="flex flex-col bg-main-200 gap-3 py-4 px-4 my-5 rounded-3xl ">
             <h3 className="bg-secondary-50  text-xl font-poppins font-extrabold rounded-3xl px-0.5">Question: {faq.question}</h3>
-            <p className="bg-secondary-50   text-lg rounded-3xl px-0.5">Answer : {faq.answer}</p>
+            <p className="bg-secondary-50   text-lg rounded-3xl px-1">Answer : {faq.answer}</p>
             </div>
 
            ))} 

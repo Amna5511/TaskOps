@@ -28,7 +28,10 @@
                         <NavLink to="/faq">FAQ</NavLink>
                         </li>
                          <li>
-                            <NavLink className="btn" to="/login">Sign In</NavLink>
+                            <NavLink className="btn" to="/auth/register">Register</NavLink>
+                        </li>
+                         <li>
+                            <NavLink className="btn" to="/auth/login">Login</NavLink>
                         </li>
                          
                 </ul>

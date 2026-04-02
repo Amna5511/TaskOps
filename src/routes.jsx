@@ -5,6 +5,8 @@ import { TaskHome } from "./features/tasks/pages/TaskHome"
 import { About } from "./layout/pages/About"
 import { Home } from "./layout/pages/Home"
 import { NotFound } from "./layout/pages/NotFound"
+import { Register } from "./features/auth/Register"
+import { Login } from "./features/auth/Login"
 
 /**
  * @type { import("react-router").RouteObject}
@@ -36,11 +38,21 @@ export const routes  =[
                 path : 'faq',
                 element : <FaqHome/>
             },
-
-
-
-            //'*'= chemin que signifie si aucun des chemin definit en haut  
-            {
+             {
+                path : "auth",
+                children : [
+                    {
+                        path: 'register',
+                        element : <Register/>
+                    },
+                     {
+                        path: 'login',
+                        element : <Login/>
+                    }
+                ] 
+            },
+             //'*'= chemin que signifie si aucun des chemin definit en haut  
+           {
                  path : '*',
                 element : <NotFound/>
                
