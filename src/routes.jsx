@@ -7,6 +7,7 @@ import { Home } from "./layout/pages/Home"
 import { NotFound } from "./layout/pages/NotFound"
 import { Register } from "./features/auth/Register"
 import { Login } from "./features/auth/Login"
+import { ProtectedPage } from "./features/auth/components/ProtectedPage"
 
 /**
  * @type { import("react-router").RouteObject}
@@ -24,11 +25,11 @@ export const routes  =[
             },
             {
                 path : 'tasks',
-                element : <TaskHome/>
+                element : <ProtectedPage><TaskHome/></ProtectedPage>
             },
             {
                 path : 'task/:id',
-                element : <TaskDetails/>
+                element : <ProtectedPage><TaskDetails/></ProtectedPage>
             },
             {
                 path : 'about',

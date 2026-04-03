@@ -1,5 +1,12 @@
  import { NavLink } from "react-router"
+import { BtnLogout } from "../../features/auth/components/BtnLogout"
+import { useAtomValue } from 'jotai'
+import { isConnectAtom } from '../../atoms/auth.atom'
+
  export const Header = ()=>{
+
+   const isConnect = useAtomValue(isConnectAtom);
+
 
     return(
         <header className="flex justify-between  items-center py-4 px-8 bg-main-100">
@@ -12,29 +19,49 @@
             <nav>
                 <ul className="flex items-center gap-6 text-lg font-bold font-oswald">
                     <li>
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/" className='whitespace-nowrap'>Home</NavLink>
                         </li>
                     <li>
-                        <NavLink to="/tasks">Tasks</NavLink>
+                        <NavLink to="/tasks" className='whitespace-nowrap'>Tasks</NavLink>
                         </li>
                     <li>
-                        <NavLink to="/pomodoro">Pomodoro</NavLink>
+                        <NavLink to="/pomodoro" className='whitespace-nowrap'>Pomodoro</NavLink>
                         </li>
                        
                          <li>
-                        <NavLink to="/about">About</NavLink>
+                        <NavLink to="/about" className='whitespace-nowrap'>About</NavLink>
                         </li>
                          <li>
-                        <NavLink to="/faq">FAQ</NavLink>
-                        </li>
-                         <li>
-                            <NavLink className="btn" to="/auth/register">Register</NavLink>
-                        </li>
-                         <li>
-                            <NavLink className="btn" to="/auth/login">Login</NavLink>
-                        </li>
+                        <NavLink to="/faq" className='whitespace-nowrap'>FAQ</NavLink>
+                        </li>       
                          
-                </ul>
+                      </ul>
+
+                       <ul>
+                       
+                         <li>
+                            {!isConnect ? (
+                                 <div className="btn-grp">
+                                     <NavLink className="btn flex flex-row  gap-0.5" to="/auth/register">
+                            <span>☀️</span>
+                            <span className="whitespace-nowrap hidden lg:block"> Register</span>
+                            </NavLink>
+                       
+                            <NavLink className="btn flex flex-row gap-0.5" to="/auth/login">
+                             <span>🌠</span>
+                            <span className="whitespace-nowrap hidden lg:block"> Login</span>
+                            </NavLink>
+                            </div>
+
+                            ) : (
+                                <BtnLogout/>
+                            )}
+                           
+                        </li>
+                        
+                        </ul>
+                        
+                       
             </nav>
         </header>
     )

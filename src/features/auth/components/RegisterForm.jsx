@@ -34,22 +34,22 @@ export const RegisterForm = () => {
         
             <form action={handleRegisterSubmit}> 
                 <div>
-                    <label htmlFor={id + 'email'}>Email d'utilisateur :</label>
+                    <label htmlFor={id + 'email'}>User email :</label>
                     <input id={id + 'email'} name="email" type="text"/>
                 </div>
 
                 <div>
-                    <label htmlFor={id + 'firstname'}>Prénom :</label>
+                    <label htmlFor={id + 'firstname'}>First name :</label>
                     <input id={id + 'firstname'} name="firstname" type="text"/>
                 </div>
 
                 <div>
-                    <label htmlFor={id + 'lastname'}>Nom :</label>
+                    <label htmlFor={id + 'lastname'}>Last name :</label>
                     <input id={id + 'lastname'} name="lastname" type="text"/>
                 </div>
 
                 <div>
-                    <label htmlFor={id + 'password'}>Mot de passe :</label>
+                    <label htmlFor={id + 'password'}>Password :</label>
                     <input id={id + 'password'} name="password" type="password"/>
                 </div>
 
