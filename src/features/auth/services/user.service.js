@@ -20,7 +20,6 @@ const userService = {
         // Renvoi des données
         return response.data;
     }
-
 };
 
 export default userService;
