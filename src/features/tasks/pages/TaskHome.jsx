@@ -5,12 +5,16 @@ import { taskAtom, selectedUserAtom } from '../../../atoms/task.atom'
 import { tokenAtom } from '../../../atoms/auth.atom'
 import axios from 'axios'
 import  taskService from '../../auth/services/task.service'
+import { useState } from 'react'
 
 
 
 
 
 export const TaskHome =()=>{
+
+    const [loading,setLoading]= useState(false);
+
 
     //pour lire le token 
     const token =useAtomValue(tokenAtom);
@@ -26,12 +30,16 @@ export const TaskHome =()=>{
    // sauvegarder le id 
    setUserTask(user)
 
-   const data  = await taskService.getByUser(user._id)
-    setTasks(data)
+    setLoading(true);
+
+    const data = await taskService.getByUser(user._id);
+
+    setTasks(data);
+
+    setLoading(false);
   
 
-
-
+   
 
 
    }
@@ -50,7 +58,18 @@ export const TaskHome =()=>{
            {/*<NavLink to="/task/1">See more details for Task 1</NavLink>
             <NavLink to="/task/2">See more details for Task 2</NavLink>
             <NavLink to="/task/3">See more details for Task 3</NavLink>*/}
-            <TaskUserSelector/>
+            <TaskUserSelector onUserSelected={handleUserSelected}/>
+            {loading && <p>Chargement...</p>}
+
+           {!loading && tasks.length > 0 && (
+           <ul>
+           {tasks.map(task => (
+            <li key={task._id}>
+                {task.name}
+            </li>
+             ))}
+            </ul>
+        )}
         </section>
         
         </>
